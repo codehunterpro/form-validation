@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form validator</title>
+    <!-- Favicon Link -->
+    <link rel="icon" type="png/img" href="favicon.png" />
+    <!-- Link Fontawesome  -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+<!-- loader -->
+<div class="loader-div" hidden>
+  <div class="loader" >
+    <img src="loader.svg" alt="loader svg image">
+  </div>
+</div>
+
+    <h1>Form validator</h1>
+    <!-- form-container -->
+    <div class="form-container">
+      <!-- form header -->
+      <div class="form-header">
+        <h2>Sign Up Today!</h2>
+      </div>
+      <!-- input form -->
+      <form class="data-form" novalidate>
+        <!-- full-name -->
+        <label for="FullName" class="label-name">Full Name</label>
+        <input
+          type="text"
+          class="value-name"
+          placeholder="Full Name"
+          required
+          minlength="3"
+          maxlength="100"
+          id="FullName"
+          name="name"
+        />
+
+        <!-- Phone Number -->
+        <label for="PhoneNumber" class="label-phone">Phone Number</label>
+        <input
+          type="tel"
+          class="value-phone"
+          placeholder="555-555-5555"
+          required
+          id="PhoneNumber"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          name="phone"
+        />
+
+        <!-- Email Address -->
+        <label for="EmailAddress" class="label-address">Email Address</label>
+        <input
+          type="email"
+          class="value-email"
+          placeholder="email@address.com"
+          required
+          id="EmailAddress"
+          name="email"
+        />
+
+        <!-- Website URL -->
+        <label for="web-url" class="label-website"> Website URL</label>
+        <input
+          type="url"
+          id="web-url"
+          class="value-website"
+          placeholder="http://codehunterpro.com"
+          required
+          name="website"
+        />
+        <!-- Password -->
+        <label for="Password" class="label-password">Password</label>
+        <input
+          type="password"
+          class="value-password"
+          placeholder="Create Password (Min. 8 characters)"
+          required
+          id="Password"
+          pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+          title="Please Includes at least 1 uppercase, 1 lowercase, number & special Character(!, $, &,....)"
+          
+        />
+
+        <!-- Confirm-Password -->
+        <label for="ConfirmPassword" class="label-confirm-pass"
+          >Confirm Password</label
+        >
+        <input
+          type="password"
+          class="value-confirm-pass"
+          placeholder="Confirm Password"
+          required
+          id="ConfirmPassword"
+          pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+          name="password"
+        />
+        <!-- button -->
+        <button type="submit" class="btn-submit">Register</button>
+      </form>
+      <div class="form-info">
+        <h2 class="info-text">Don't Hesitate</h2>
+      </div>
+    </div>
+
+    <!-- Link Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
